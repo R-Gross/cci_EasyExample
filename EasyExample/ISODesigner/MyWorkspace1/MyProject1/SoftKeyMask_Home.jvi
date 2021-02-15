@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<JetView-Document Version="0" ObjectPoolVersion="3.0" ProductVersion="5.4.0.4246">
+<JetView-Document Version="2" ObjectPoolVersion="3.0" ProductVersion="5.5.0.4333">
 	<PropertySheets>
 		<PropertySheet Name="General">
 			<Property Name="ObjectID">
@@ -183,7 +183,7 @@
 				<Object JVS-ID="5002"/>
 			</Objects>
 		</Component>
-		<Component ID="20060400" Class="CPointer" Name="Pointer">
+		<Component ID="27416704" Class="CPointer" Name="Pointer">
 			<PropertySheets>
 				<PropertySheet Name="General">
 					<Property Name="ZOrder">
@@ -209,7 +209,7 @@
 				</PropertySheet>
 			</PropertySheets>
 			<Objects>
-				<Object JVS-ID="27002"/>
+				<Object JVS-ID="27001"/>
 			</Objects>
 		</Component>
 		<Component ID="407958720" Class="CPointer" Name="Pointer">
@@ -241,7 +241,7 @@
 				<Object JVS-ID="27000"/>
 			</Objects>
 		</Component>
-		<Component ID="897381705" Class="CPointer" Name="Pointer">
+		<Component ID="370207419" Class="CSoftKey" Name="SoftKey">
 			<PropertySheets>
 				<PropertySheet Name="General">
 					<Property Name="ZOrder">
@@ -267,7 +267,7 @@
 				</PropertySheet>
 			</PropertySheets>
 			<Objects>
-				<Object JVS-ID="27001"/>
+				<Object JVS-ID="5004"/>
 			</Objects>
 		</Component>
 		<Component ID="213702062" Class="CSoftKey" Name="SoftKey">
