@@ -17,14 +17,14 @@
 #define SoftKey_PlusPlus                   5000
 #define SoftKey_Reset_Gesamtzaehler        5001
 #define SoftKey_Reset_Tageszaehler         5002
-#define SoftKey_Minus                      5004
 #define Button_HOME                        6000
 #define Button_Reset_Gesamtzaehler         6001
 #define Button_Reset_Tageszaehler          6002
-#define Button_Minus                       6003
-#define Button_Seite1                      6004
-#define Button_PlusPlus                    6005
-#define InputNumber_Gesamtzaehler          9000
+#define SoftKey_MinusMinus                 6003
+#define Button_Minus                       6004
+#define Button_Seite1                      6005
+#define Button_PlusPlus                    6006
+#define InputNumber_Tagesziel              9000
 #define OutputString_PlusPlus             11000
 #define OutputString_Fasszaehler          11001
 #define OutputString_Reset_Gesamtzaehler  11002
@@ -32,7 +32,7 @@
 #define OutputString_Tageszaehler         11004
 #define OutputString_Reset_Tageszaehler   11005
 #define OutputString_Minus                11006
-#define OutputString_11007                11007
+#define OutputString_MinusMinus           11007
 #define OutputString_11008                11008
 #define OutputString_11009                11009
 #define OutputNumber_Tageszaehler         12000
@@ -43,7 +43,7 @@
 #define LinearBargraph_Tageszaehler       18001
 #define NumberVariable_Tageszaehler       21000
 #define NumberVariable_Gesamtzaehler      21001
-#define FontAttributes_23000              23000
+#define NumberVariable_Tagesziel          21002
 #define FontAttributes_Default            23001
 #define FontAttributes_Button             23002
 #define ObjectPointer_Null2               27000

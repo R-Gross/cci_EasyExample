@@ -2,13 +2,11 @@
 <JetViewSoft-DefaultObjects Version="3.0" ProductVersion="5.5.0.4333" RelatedObjectPool=".\MyProject1.jop">
 	<Objects>
 		<Object Class="CButton">
-			<Objects>
-				<Object Class="CFontStyle" JVS-ID="23000" ObjectName="FontAttributes_23000"/>
-			</Objects>
+			<Objects/>
 		</Object>
 		<Object Class="CInputNumber">
 			<Objects>
-				<Object Class="CNumberVariable" JVS-ID="21001" ObjectName="NumberVariable_Gesamtzaehler"/>
+				<Object Class="CNumberVariable" JVS-ID="21002" ObjectName="NumberVariable_Tagesziel"/>
 				<Object Class="CFontStyle" JVS-ID="23001" ObjectName="FontAttributes_Default"/>
 			</Objects>
 		</Object>
@@ -25,7 +23,7 @@
 		</Object>
 		<Object Class="COutputText">
 			<Objects>
-				<Object Class="CFontStyle" JVS-ID="23002" ObjectName="FontAttributes_Button"/>
+				<Object Class="CFontStyle" JVS-ID="23001" ObjectName="FontAttributes_Default"/>
 			</Objects>
 		</Object>
 	</Objects>

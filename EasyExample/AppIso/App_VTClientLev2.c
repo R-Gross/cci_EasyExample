@@ -92,8 +92,11 @@ void VTC_setPoolManipulation(iso_u8 u8Instance)
 }
 
 
+
+
 iso_u32 Tageszaehler = 0;
 iso_u32 Gesamtzaehler = 0;
+iso_u32 Tagesziel = 0; // Variable im Arbeitsspeicher RAM
 
 
 void VTC_handleSoftkeysAndButtons_RELEASED(const struct ButtonActivation_S *pButtonData) {
@@ -101,7 +104,7 @@ void VTC_handleSoftkeysAndButtons_RELEASED(const struct ButtonActivation_S *pBut
 	// what button was released
 	switch (pButtonData->objectIdOfButtonObject) {
 
-
+	case SoftKey_MinusMinus:
 	case Button_Minus:
 		Tageszaehler--;
 		Gesamtzaehler--;
@@ -149,6 +152,12 @@ void VTC_handleNumericValues(const struct InputNumber_S * pInputNumberData) {
 		Gesamtzaehler = pInputNumberData->newValue;
 		break;
 
+	case NumberVariable_Tagesziel:
+			ESP_LOGI(TAG, "Tagesziel: %i", pInputNumberData->newValue);
+			Tagesziel = pInputNumberData->newValue;
+			setU32("CF-A", "Tagesziel", Tagesziel);
+			break;
+
 
 	default:
 		break;
@@ -177,12 +186,14 @@ void VTC_setPoolReady(iso_u8 u8Instance)
 	// Laden aus dem Spannungsausfallsicheren Speicher ins RAM
 	// STANDARD-Wert = 0; wenn nichts abgespeichert.
 	Gesamtzaehler = getU32("CF-A", "Gesamtzaehler", 0);
+	Tagesziel = getU32("CF-A", "Tagesziel", 0);
 
 
 	// Senden des Wertes der lokalen Variable Tageszaehler an die NumberVariable_Tageszaehler
 	IsoVtcCmd_NumericValue(u8Instance, NumberVariable_Tageszaehler, Tageszaehler);
 	// Senden des Wertes der lokalen Variable Gesamtzaehler an die NumberVariable_Gesamtzaehler
 	IsoVtcCmd_NumericValue(u8Instance, NumberVariable_Gesamtzaehler, Gesamtzaehler);
+	IsoVtcCmd_NumericValue(u8Instance, NumberVariable_Tagesziel, Tagesziel);
 }
 
 
